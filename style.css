@@ -9,5 +9,49 @@ body{
     width: 400px;
     height: 600px;
     border: 3px solid rgb(67, 65, 65);
-    border-radius: 24px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-buttons{
+    margin: 15px 0px;
+}
+
+.clear{
+    background-color: #faa;
+}
+
+.delete{
+    background-color: #aaf;
+}
+
+.clear, .delete{
+    font-size: 18px;
+    margin: 0px 5px;
+    width: 174px;
+    height: 70px;
+}
+
+.screen{
+    width: 360px;
+    height:140px;
+    margin-top: 15px;
+    align-items: center;
+    background-color: #eee;
+}
+
+.calc-buttons{
+    width: 80px;
+    height:70px;
+    font-size: 20px;
+    margin: 5px;
+    text-align: center;
+    background-color: #eee;
+}
+
+.box{
+    border: 2px solid rgb(67, 65, 65);
+    border-radius: 8px;
 }
