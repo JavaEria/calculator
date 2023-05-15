@@ -1,5 +1,5 @@
 body{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
 }
@@ -35,11 +35,21 @@ body{
 }
 
 .screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
     width: 360px;
     height:140px;
     margin-top: 15px;
-    align-items: center;
     background-color: #eee;
+}
+
+.screen > p {
+    color:#313131;
+    font-family: 'math';
+    font-size: 35px;
+    margin:5px 20px;
 }
 
 .calc-buttons{
