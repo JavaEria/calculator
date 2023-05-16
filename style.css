@@ -52,11 +52,11 @@ body{
 }
 
 .screen > #result-value{
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .screen > #entered-value{
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .calc-buttons{
