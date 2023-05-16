@@ -1,5 +1,6 @@
 const clearButton = document.querySelector(".clear");
 const deleteButton = document.querySelector(".delete");
+const decimalButton = document.querySelector("#decimal-button");
 const calcButtonsList = document.querySelectorAll(".calc-buttons");
 const enteredValue = document.querySelector("#entered-value");
 const resultValue = document.querySelector("#result-value");
@@ -43,9 +44,11 @@ function interpretButtons(buttonText) {
       if (currentOperand === "") {
         aValue += buttonText;
         enteredValue.textContent += buttonText;
+        if (buttonText === ".") decimalButton.disabled = true;
       } else {
         bValue += buttonText;
         enteredValue.textContent = bValue;
+        if (buttonText === ".") decimalButton.disabled = true;
       }
       break;
     case buttonText in methods:
@@ -54,6 +57,7 @@ function interpretButtons(buttonText) {
         resultValue.textContent = `${aValue} ${buttonText}`;
         currentOperand = buttonText;
       }
+      decimalButton.disabled = false;
       break;
     case buttonText === "x":
       if (aValue !== "" && bValue !== "") evaluateResult("x", true);
@@ -61,6 +65,7 @@ function interpretButtons(buttonText) {
         resultValue.textContent = `${aValue} ${buttonText}`;
       }
       currentOperand = "*";
+      decimalButton.disabled = false;
       break;
     case buttonText === "=":
       if (bValue) {
@@ -98,4 +103,5 @@ evaluateResult = (buttonValue, replaceScreenValue) => {
   }
   aValue = result;
   bValue = "";
+  decimalButton.disabled = false;
 };
