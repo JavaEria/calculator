@@ -22,3 +22,11 @@ clearButton.addEventListener("click", () => {
   aValue = "";
   bValue = "";
 });
+
+roundToOneDecimal = (number) => Math.round(number * 10) / 10;
+
+removeDigit = (number) => {
+  number = number.slice(0, -1);
+  if (number[number.length - 1] === ".") number = number.slice(0, -1);
+  return number;
+};
