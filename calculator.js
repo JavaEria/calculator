@@ -23,6 +23,16 @@ clearButton.addEventListener("click", () => {
   bValue = "";
 });
 
+deleteButton.addEventListener("click", () => {
+  if (currentOperand === "") {
+    aValue = removeDigit(aValue).toString();
+    enteredValue.textContent = aValue;
+  } else {
+    bValue = removeDigit(bValue).toString();
+    enteredValue.textContent = bValue;
+  }
+});
+
 roundToOneDecimal = (number) => Math.round(number * 10) / 10;
 
 removeDigit = (number) => {
