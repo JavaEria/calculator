@@ -48,8 +48,15 @@ body{
 .screen > p {
     color:#313131;
     font-family: 'math';
-    font-size: 35px;
     margin:5px 20px;
+}
+
+.screen > #result-value{
+    font-size: 20px;
+}
+
+.screen > #entered-value{
+    font-size: 30px;
 }
 
 .calc-buttons{
