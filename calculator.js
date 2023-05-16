@@ -14,3 +14,11 @@ const methods = {
   "*": (a, b) => a * b,
   "÷": (a, b) => a / b,
 };
+
+clearButton.addEventListener("click", () => {
+  enteredValue.textContent = "";
+  resultValue.textContent = "";
+  currentOperand = "";
+  aValue = "";
+  bValue = "";
+});
