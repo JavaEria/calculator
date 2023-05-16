@@ -7,3 +7,10 @@ let aValue = "";
 let bValue = "";
 let result;
 let currentOperand = "";
+
+const methods = {
+  "+": (a, b) => +a + +b,
+  "-": (a, b) => a - b,
+  "*": (a, b) => a * b,
+  "÷": (a, b) => a / b,
+};
